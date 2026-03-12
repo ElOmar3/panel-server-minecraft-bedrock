@@ -341,6 +341,11 @@ class MinecraftDashboard:
     def start_server(self):
         if self.server_proc: return
         self.log(">>> [SISTEMA] Iniciando servidor...", ACCENT_BLUE)
+        
+        # Actualizar dinamicamente el nombre del mundo por si el usuario acaba de pegarlo
+        global WORLD_NAME
+        WORLD_NAME = get_world_name(SERVER_DIR)
+        
         self.check_integrity()
         
         try:
@@ -356,6 +361,13 @@ class MinecraftDashboard:
             self.backup_thread = threading.Thread(target=self.backup_loop, daemon=True)
             self.backup_thread.start()
             self.update_ui_state(True)
+            
+            # Actualizar la interfaz con el nombre correcto del mundo
+            v_local = "Desconocida"
+            if os.path.exists(VERSION_FILE):
+                with open(VERSION_FILE, 'r') as f: v_local = f.read().strip()
+            self.update_info_text(f"Mundo: {WORLD_NAME}\nVersión: {v_local}\nStatus: EN LÍNEA ✓")
+                                  
         except Exception as e: messagebox.showerror("Error", f"Fallo al iniciar: {e}")
 
     def update_ui_state(self, running):
