@@ -1,0 +1,39 @@
+# Minecraft Bedrock Server files
+bedrock_server.exe
+bedrock_server_how_to.html
+release-notes.txt
+*.dll
+*.pdb
+
+# Local Progress and configurations
+worlds/
+resp/
+backup_log.txt
+server.properties
+allowlist.json
+permissions.json
+version_actual.txt
+packet-statistics.txt
+
+# Resource and behavior packs (optional depending on if it's customized and you want to share them)
+behavior_packs/
+resource_packs/
+development_behavior_packs/
+development_resource_packs/
+development_skin_packs/
+world_templates/
+config/
+data/
+definitions/
+
+# Generated Configuration for dashboard
+config.json
+
+# Logs and Python cache
+*.log
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
