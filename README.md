@@ -2,7 +2,8 @@
 
 Consola de administración gráfica y sistema de backups automáticos para servidores de **Minecraft Bedrock Edition** en Windows. 
 
-![Minecraft Dashboard Preview](https://imgur.com/your-image-url.png) <!-- TODO: Change with actual screenshot -->
+
+
 
 ## Características Principales
 
