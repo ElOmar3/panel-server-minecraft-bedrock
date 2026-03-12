@@ -55,3 +55,7 @@ config.json           -> (Auto-generado) Ajustes personalizados para el usuario.
 ```
 
 ¡Disfruta organizando tu servidor sin el clásico dolor de cabeza!
+
+## Créditos y Agradecimientos
+
+- **API de Descargas de Bedrock**: Un agradecimiento especial a **[kittizz](https://github.com/kittizz/bedrock-server-downloads)** por proveer la API comunitaria que este dashboard utiliza para buscar y detectar las versiones más recientes del servidor de Minecraft Bedrock de forma rápida y segura.
