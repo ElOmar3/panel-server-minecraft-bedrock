@@ -436,7 +436,11 @@ class MinecraftDashboard:
         
         try:
             os.makedirs(os.path.join(dest, "worlds"), exist_ok=True)
-            shutil.copy(os.path.join(SERVER_DIR, "server.properties"), dest)
+            
+            prop_path = os.path.join(SERVER_DIR, "server.properties")
+            if os.path.exists(prop_path):
+                shutil.copy(prop_path, dest)
+                
             src_world = os.path.join(SERVER_DIR, "worlds", WORLD_NAME)
             if os.path.exists(src_world):
                 shutil.copytree(src_world, os.path.join(dest, "worlds"), dirs_exist_ok=True)
