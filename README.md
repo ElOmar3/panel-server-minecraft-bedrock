@@ -18,10 +18,9 @@ Consola de administración gráfica y sistema de backups automáticos para servi
 
 1. Clona este repositorio o descarga el código fuente y ponlo en tu servidor local.
 2. Descarga los binarios base del servidor original de _Minecraft Bedrock_ directamente desde el dashboard o colócalos tú mismo al lado de estos `.py` y `.ps1`.
-3. Ejecuta el archivo python para inicializar:
-   ```bash
-   python server_dashboard.py
-   ```
+3. Para inicializar el panel, haz **doble clic en el archivo `ABRIR_DASHBOARD.bat`**. 
+   - *El script verificará inteligentemente si tienes Python instalado y ejecutará la interfaz gráfica de forma amigable.*
+   - *(Alternativamente, puedes abrir una consola y escribir `python server_dashboard.py`)*
 4. En el primer lanzamiento, se autogenerará un archivo `config.json` en el cual podrás especificar cosas como tu nombre de la carpeta del mundo, la ruta de tu Playit y el intervalo de los respaldos.
 
 ## Uso del Auto-Backup sin el panel

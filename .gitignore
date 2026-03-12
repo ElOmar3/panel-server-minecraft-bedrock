@@ -36,6 +36,7 @@ profanity_filter.wlist
 # Shortcuts and temp files
 *.lnk
 *.bat
+!ABRIR_DASHBOARD.bat
 *.txt
 
 # Old scripts
