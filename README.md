@@ -1,5 +1,9 @@
 # Minecraft Bedrock Server Dashboard MVP
 
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 Consola de administración gráfica y sistema de backups automáticos para servidores de **Minecraft Bedrock Edition** en Windows.
 
 ## Características Principales
@@ -62,3 +66,11 @@ config.json           -> (Auto-generado) Ajustes personalizados para el usuario.
 ## Créditos y Agradecimientos
 
 - **API de Descargas de Bedrock**: Un agradecimiento especial a **[kittizz](https://github.com/kittizz/bedrock-server-downloads)** por proveer la API comunitaria que este dashboard utiliza para buscar y detectar las versiones más recientes del servidor de Minecraft Bedrock de forma rápida y segura.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras un bug, tienes una idea de mejora o quieres agregar nuevas funciones, siéntete libre de rellenar un *Issue* o mandar un *Pull Request* al repositorio.
+
+## Licencia
+
+Este proyecto está bajo la Licencia **MIT** - mira el archivo [LICENSE](LICENSE) para más detalles. Puedes usarlo, modificarlo y compartirlo libremente.
