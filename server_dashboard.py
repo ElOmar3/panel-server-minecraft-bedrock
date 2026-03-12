@@ -703,7 +703,9 @@ class MinecraftDashboard:
             # 5. Restaurar configuración y mundo desde el respaldo
             self.log(">>> [ACTUALIZACIÓN] Restaurando configuración personalizada...", "#aaa")
             # Restaurar properties
-            shutil.copy2(os.path.join(backup_path, "server.properties"), SERVER_DIR)
+            prop_backup = os.path.join(backup_path, "server.properties")
+            if os.path.exists(prop_backup):
+                shutil.copy2(prop_backup, SERVER_DIR)
             # Restaurar mundo
             src_world = os.path.join(backup_path, "worlds")
             dst_world = os.path.join(SERVER_DIR, "worlds", WORLD_NAME)
