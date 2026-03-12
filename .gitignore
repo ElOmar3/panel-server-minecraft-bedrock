@@ -29,6 +29,22 @@ definitions/
 # Generated Configuration for dashboard
 config.json
 
+# Extra Bedrock Server files
+packetlimitconfig.json
+profanity_filter.wlist
+
+# Shortcuts and temp files
+*.lnk
+*.bat
+*.txt
+
+# Old scripts
+actualizar.ps1
+admin_cmd.ps1
+apagarserver.ps1
+check_windows*.ps1
+iniciar.ps1
+
 # Logs and Python cache
 *.log
 __pycache__/
