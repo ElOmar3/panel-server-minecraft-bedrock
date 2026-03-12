@@ -670,6 +670,8 @@ class MinecraftDashboard:
         ver = self.latest_version_info['version']
         url = self.latest_version_info['url']
         
+        is_first_install = not os.path.exists(VERSION_FILE)
+        
         self.log(f">>> [ACTUALIZACIÓN] Iniciando proceso para v{ver}...", ACCENT_BLUE)
         
         # 1. Respaldo previo
@@ -727,7 +729,11 @@ class MinecraftDashboard:
             # 6. Finalizar
             with open(VERSION_FILE, 'w') as f: f.write(ver)
             self.log(f">>> [ÉXITO] Servidor actualizado a la versión {ver} correctamente.", ACCENT_GREEN)
-            messagebox.showinfo("La Maldición del Lag", f"¡Actualización a v{ver} completada con éxito!")
+            
+            if is_first_install:
+                messagebox.showinfo("Primera Instalación Completa", f"¡Binarios v{ver} descargados e instalados con éxito!\n\nPara garantizar que el servidor reconozca los nuevos archivos base, por favor **CIERRA** y vuelve a abrir el programa (reinicia el panel).", icon='warning')
+            else:
+                messagebox.showinfo("La Maldición del Lag", f"¡Actualización a v{ver} completada con éxito!")
             
             # Limpiar
             os.remove(temp_zip)
