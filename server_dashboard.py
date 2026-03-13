@@ -428,13 +428,18 @@ class MinecraftDashboard:
         if not backups: return
         
         reciente = backups[0]
-        backup_world = os.path.join(RESP_DIR, reciente, "worlds")
+        backup_world = os.path.join(RESP_DIR, reciente, "worlds", WORLD_NAME)
+        
+        # Si en el backup más reciente no existe este mundo (ej. acaban de pegarlo), omitir
+        if not os.path.exists(backup_world): return
+        
         size_actual = self.get_dir_size(world_path)
         size_backup = self.get_dir_size(backup_world)
         
         if size_actual < size_backup:
             self.log(f"!!! [ALERTA] Mundo corrupto detectado ({size_actual} < {size_backup} bytes)", ACCENT_RED)
-            shutil.rmtree(world_path); shutil.copytree(backup_world, world_path)
+            shutil.rmtree(world_path)
+            shutil.copytree(backup_world, world_path)
             self.log(">>> [ÉXITO] Restauración completa.", ACCENT_GREEN)
 
     def do_backup(self, is_update=False):
